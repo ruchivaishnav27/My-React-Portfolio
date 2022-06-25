@@ -1,6 +1,6 @@
 import React from 'react';
-import coverImage from '../../assets/images/cover-image.jpg';
-function About() {
+import coverImage from '../../assets/images/cover-image';
+function Header() {
   return (
     <section className="my-5">
       <h1 id="header">Ruchi Vaishnav</h1>
