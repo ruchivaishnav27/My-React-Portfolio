@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import { validateEmail } from '../../utils/helpers';
 
-function ContactForm() {
+function Footer() {
   const [formState, setFormState] = useState({ name: '', email: '', message: '' });
 
   const [errorMessage, setErrorMessage] = useState('');
@@ -49,8 +49,12 @@ function ContactForm() {
           <input type="email" name="email" defaultValue={email} onBlur={handleChange} />
         </div>
         <div>
-          <label htmlFor="message">Message:</label>
-          <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange} />
+          <label htmlFor="github">GitHub:</label>
+          <textarea type="github" name="github" defaultValue={github} onBlur={handleChange} />
+        </div>
+        <div>
+          <label htmlFor="linkedin">LinkedIn:</label>
+          <textarea type="linkedin" name="linkedin" defaultValue={linkedin} onBlur={handleChange} />
         </div>
         {errorMessage && (
           <div>
@@ -63,4 +67,4 @@ function ContactForm() {
   );
 }
 
-export default ContactForm;
+export default Footer;

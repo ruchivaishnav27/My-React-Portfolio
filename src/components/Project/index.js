@@ -1,152 +1,67 @@
 import React, { useState } from 'react';
-import Modal from '../Modal';
 
-const PhotoList = ({ category }) => {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [currentPhoto, setCurrentPhoto] = useState();
+const Projects = ({ language }) => {
 
-  const [photos] = useState([
+  const [projects] = useState([
     {
-      name: 'Grocery aisle',
-      category: 'commercial',
+      name: 'Film Advisor',
+      language: 'HTML, CSS, and JavaScript',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
     },
     {
-      name: 'Grocery booth',
-      category: 'commercial',
+      name: 'Passion Project',
+      language: 'HTML, CSS, and JavaScript',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
     },
     {
-      name: 'Building exterior',
-      category: 'commercial',
+      name: 'Company Website',
+      language: 'HTML and CSS',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
     },
     {
-      name: 'Restaurant table',
-      category: 'commercial',
+      name: 'Password Generator',
+      language: 'JavaScript',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
     },
     {
-      name: 'Cafe interior',
-      category: 'commercial',
+      name: 'Coding Quiz',
+      language: 'JavaScript',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
     },
     {
-      name: 'Cat green eyes',
-      category: 'portraits',
+      name: 'Workday Scheduler',
+      language: 'JavaScript',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
     },
     {
-      name: 'Green parrot',
-      category: 'portraits',
+      name: 'Weather Dashboard',
+      language: 'JavaScript',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
     },
     {
-      name: 'Yellow macaw',
-      category: 'portraits',
+      name: 'Professional README Generator',
+      language: 'Node.js',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
     },
     {
-      name: 'Pug smile',
-      category: 'portraits',
+      name: 'Employee Tracker',
+      language: 'MySQL',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
     },
     {
-      name: 'Pancakes',
-      category: 'food',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Burrito',
-      category: 'food',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Scallop pasta',
-      category: 'food',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Burger',
-      category: 'food',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Fruit bowl',
-      category: 'food',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Green river',
-      category: 'landscape',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Docks',
-      category: 'landscape',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Panoramic village by sea',
-      category: 'landscape',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Domestic landscape',
-      category: 'landscape',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Park bench',
-      category: 'landscape',
+      name: 'Note Taker',
+      language: 'Express.js',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
     }
   ]);
-
-  const currentPhotos = photos.filter(photo => photo.category === category);
-
-  const toggleModal = (image, i) => {
-    setCurrentPhoto({ ...image, index: i });
-    setIsModalOpen(!isModalOpen);
-  };
-
-  return (
-    <div>
-      {isModalOpen && (
-        <Modal onClose={toggleModal} currentPhoto={currentPhoto} />
-      )}
-      <div className="flex-row">
-        {currentPhotos.map((image, i) => (
-          <img
-            src={require(`../../assets/small/${category}/${i}.jpg`).default}
-            alt={image.name}
-            className="img-thumbnail mx-1"
-            onClick={() => toggleModal(image, i)}
-            key={image.name}
-          />
-        ))}
-      </div>
-    </div>
-  );
 };
-
-export default PhotoList;

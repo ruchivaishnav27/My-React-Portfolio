@@ -1,50 +1,50 @@
 import React, { useEffect } from 'react';
 import { capitalizeFirstLetter } from '../../utils/helpers';
 
-function Nav(props) {
+function Navigation(props) {
   const {
-    categories = [],
-    setCurrentCategory,
-    contactSelected,
-    currentCategory,
-    setContactSelected,
+    languages = [],
+    setCurrentLanguge,
+    footerSelected,
+    currentLanguage,
+    setFooterSelected,
   } = props;
 
   useEffect(() => {
-    document.title = capitalizeFirstLetter(currentCategory.name);
-  }, [currentCategory]);
+    document.title = capitalizeFirstLetter(currentLanguage.name);
+  }, [currentLanguage]);
 
   return (
     <header className="flex-row px-1">
       <h2>
         <a data-testid="link" href="/">
-          <span role="img" aria-label="camera"> 📸</span> Oh Snap!
+          <span role="img" aria-label="camera"> 📸</span> Hello There!
         </a>
       </h2>
       <nav>
         <ul className="flex-row">
           <li className="mx-2">
-            <a data-testid="about" href="#about" onClick={() => setContactSelected(false)}>
+            <a data-testid="about" href="#about" onClick={() => setFooterSelected(false)}>
               About me
             </a>
           </li>
-          <li className={`mx-2 ${contactSelected && 'navActive'}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
+          <li className={`mx-2 ${footerSelected && 'navActive'}`}>
+            <span onClick={() => setFooterSelected(true)}>Contact</span>
           </li>
-          {categories.map((category) => (
+          {languages.map((languages) => (
             <li
               className={`mx-1 ${
-                currentCategory.name === category.name && !contactSelected && 'navActive'
+                currentLanguage.name === languages.name && !footerSelected && 'navActive'
                 }`}
-              key={category.name}
+              key={languages.name}
             >
               <span
                 onClick={() => {
-                  setCurrentCategory(category);
-                  setContactSelected(false);
+                  setCurrentLanguage(languages);
+                  setFooterSelected(false);
                 }}
               >
-                {capitalizeFirstLetter(category.name)}
+                {capitalizeFirstLetter(languages.name)}
               </span>
             </li>
           ))}
@@ -54,4 +54,4 @@ function Nav(props) {
   );
 }
 
-export default Nav;
+export default Navigation;

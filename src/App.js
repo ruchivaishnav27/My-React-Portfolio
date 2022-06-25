@@ -1,41 +1,40 @@
 import React, { useState } from 'react';
-import Nav from './components/Nav';
-import About from './components/About';
-import Gallery from './components/Gallery';
-import ContactForm from './components/Contact';
+import Navigation from './components/Navigation';
+import Header from './components/Header';
+import Project from './components/Project';
+import Footer from './components/Footer';
 
 function App() {
-  const [categories] = useState([
-    {
-      name: 'commercial',
-      description: 'Photos of grocery stores, food trucks, and other commercial projects',
-    },
-    { name: 'portraits', description: 'Portraits of people in my life' },
-    { name: 'food', description: 'Delicious delicacies' },
-    { name: 'landscape', description: 'Fields, farmhouses, waterfalls, and the beauty of nature' },
+  const [languages] = useState([
+    { name: 'HTML', description: 'Film Advisor, Passion Project, Company Website, Personal Website' },
+    { name: 'CSS', description: 'Film Advisor, Passion Project, Company Website, Personal Website' },
+    { name: 'JavaScript', description: 'Film Advisor, Passion Project, Password Generator, Coding Quiz, Workday Scheduler, Weather Dashboard' },
+    { name: 'Node.js', description: 'Professional README Generator' },
+    { name: 'Express.js', description: 'Note Taker' },
+    { name: 'MySQL', description: 'Employee Tracker' }
   ]);
 
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const [currentLanguage, setCurrentLanguage] = useState(languages[0]);
 
-  const [contactSelected, setContactSelected] = useState(false);
+  const [footerSelected, setFooterSelected] = useState(false);
 
   return (
     <div>
-      <Nav
-        categories={categories}
-        setCurrentCategory={setCurrentCategory}
-        currentCategory={currentCategory}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
-      ></Nav>
+      <Navigation
+        languages={languages}
+        setCurrentLanguage={setCurrentLanguage}
+        currentLanguage={currentLanguage}
+        footerSelected={footerSelected}
+        setFooterSelected={setFooterSelected}
+      ></Navigation>
       <main>
-        {!contactSelected ? (
+        {!footerSelected ? (
           <>
-            <Gallery currentCategory={currentCategory}></Gallery>
-            <About></About>
+            <Project currentLanguage={currentLanguage}></Project>
+            <Header></Header>
           </>
         ) : (
-          <ContactForm></ContactForm>
+          <Footer></Footer>
         )}
       </main>
     </div>
