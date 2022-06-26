@@ -15,25 +15,25 @@ function Navigation(props) {
   }, [currentLanguage]);
 
   return (
-    <header className="flex-row px-1">
+    <header className="nav-1">
       <h2>
         <a data-testid="link" href="/">
           Hello There!
         </a>
       </h2>
       <nav>
-        <ul className="flex-row">
-          <li className="mx-2">
+        <ul className="nav-2">
+          <li className="nav-3">
             <a data-testid="header" href="#header" onClick={() => setFooterSelected(false)}>
               About Me
             </a>
           </li>
-          <li className={`mx-2 ${footerSelected && 'navigationActive'}`}>
+          <li className={`nav-3 ${footerSelected && 'navigationActive'}`}>
             <span onClick={() => setFooterSelected(true)}>Contact</span>
           </li>
           {languages.map((languages) => (
             <li
-              className={`mx-1 ${
+              className={`nav-4 ${
                 currentLanguage.name === languages.name && !footerSelected && 'navigationActive'
                 }`}
               key={languages.name}
