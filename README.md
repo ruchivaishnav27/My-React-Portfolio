@@ -6,7 +6,7 @@ This website allows an employer to view my portfolio using React.  No challenges
 
 ## Installation
 
-To view this website, one must first install React.  They can then view it here: 
+To view this website, one must first install React.  
 
 ## Usage
 
