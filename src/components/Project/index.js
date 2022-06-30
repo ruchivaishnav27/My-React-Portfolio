@@ -7,61 +7,61 @@ const Projects = ({ language }) => {
       name: 'Film Advisor',
       language: 'HTML, CSS, and JavaScript',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        'A database where one can review a movie and view reviews of other movies.'
     },
     {
-      name: 'Passion Project',
-      language: 'HTML, CSS, and JavaScript',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Company Website',
+      name: 'My Company Website',
       language: 'HTML and CSS',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        'A website that allows my company to be viewed on a global platform and highlights what it can provide to its customers.'
     },
     {
-      name: 'Password Generator',
+      name: 'My Portfolio',
+      language: 'HTML and CSS',
+      description:
+        'A simpler version of my portfolio, demonstrating the coding languages that I have learnt.'
+    },
+    {
+      name: 'Secure Your Info',
       language: 'JavaScript',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        'A website that will generate a secure password for those who need one for protecting any sensitive information.'
     },
     {
-      name: 'Coding Quiz',
+      name: 'Get It, Got It, Code It',
       language: 'JavaScript',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        'A website that provides a quiz on coding so you can test your knowledge of initial coding concepts.'
     },
     {
-      name: 'Workday Scheduler',
+      name: 'The Day Ahead',
       language: 'JavaScript',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        'A website that displays a daily schedule where one can keep track of the events in their day.'
     },
     {
-      name: 'Weather Dashboard',
+      name: 'Whats the Weather?',
       language: 'JavaScript',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        'A website that gives a five-day weather forcast of any city in the world.'
     },
     {
-      name: 'Professional README Generator',
+      name: 'Create Me A README',
       language: 'Node.js',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        'An application that generates a ReadMe file.'
     },
     {
-      name: 'Employee Tracker',
-      language: 'MySQL',
-      description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
-    },
-    {
-      name: 'Note Taker',
+      name: 'Take A Note',
       language: 'Express.js',
       description:
-        'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc ultricie'
+        'An application where one can take and save notes on a digital platform.'
+    },
+    {
+      name: 'My Companys Employee Tracker',
+      language: 'MySQL',
+      description:
+        'An application that lets a company keep track of their employees.'
     }
   ]);
 };
